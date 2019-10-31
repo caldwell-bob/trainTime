@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>trainTime</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/trainTime.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDcGHWKNOwTZf_QGUGl6wO-Zrtf_qoaaYU",
+            authDomain: "traintime-b14b2.firebaseapp.com",
+            databaseURL: "https://traintime-b14b2.firebaseio.com",
+            projectId: "traintime-b14b2",
+            storageBucket: "traintime-b14b2.appspot.com",
+            messagingSenderId: "928101720379",
+            appId: "1:928101720379:web:204822765d26e331f3171e",
+            measurementId: "G-R1XHQNYJN4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-2">Anytime is Train Time</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
+    <div id="main_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    Current Time Schedule
+                </div>
+                <!-- <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <table class="table">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody class="trainSchedule">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    Add Trains
+                </div>
+                <!-- <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputTrainName">Train Name</label>
+                            <input type="text" class="form-control" id="inputTrainName">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDestination">Destination</label>
+                            <input type="text" class="form-control" id="inputDestination">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTrainTime">First Train Time (HH:mm - military time)</label>
+                            <input type="text" class="form-control" id="inputTrainTime">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputFrequency">Frequency (min)</label>
+                            <input type="text" class="form-control" id="inputFrequency">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
