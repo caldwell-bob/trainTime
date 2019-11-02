@@ -76,22 +76,20 @@ $("document").ready(function() {
     var firstTrain = moment(dbDump.trainTime, "HH:mm").subtract(1, "years");
 
     console.log("The first train starts : " + firstTrain);
-    var timeNow = moment().format("LT");
-    console.log("timeNow : " + timeNow);
-
+ 
     var diffTime = moment().diff(moment(firstTrain), "minutes");
     console.log("diffTime : " + diffTime);
-    var tRemainder = diffTime % dbDump.trainFrequency;
+    var tRemainder = diffTime % dbDump.frequency;
     console.log("tRemainder : " + tRemainder);
-    var tMinutesTillTrain = dbDump.trainFrequency - tRemainder;
+    var tMinutesTillTrain = dbDump.frequency - tRemainder;
     console.log("tMinutesTillTrain : " + tMinutesTillTrain);
     var nextTrainTime = moment().add(tMinutesTillTrain, "minutes");
     console.log("nextTrainTime : " + nextTrainTime);
     var nextTrainFormat = moment(nextTrainTime).format("LT");
 
+    time.text(nextTrainFormat);
     train.text(dbDump.trainName);
     destination.text(dbDump.destination);
-    time.text(nextTrainFormat);
     frequency.text(dbDump.frequency);
     nextTrain.text(tMinutesTillTrain);
     row.append(train, destination, frequency, time, nextTrain);
