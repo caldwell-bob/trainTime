@@ -12,10 +12,23 @@
     <title>trainTime</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Custom Files css/js -->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/javascript/trainTime.js"></script>
 </head>
@@ -26,29 +39,9 @@
         <![endif]-->
 
     <script src="" async defer></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDcGHWKNOwTZf_QGUGl6wO-Zrtf_qoaaYU",
-            authDomain: "traintime-b14b2.firebaseapp.com",
-            databaseURL: "https://traintime-b14b2.firebaseio.com",
-            projectId: "traintime-b14b2",
-            storageBucket: "traintime-b14b2.appspot.com",
-            messagingSenderId: "928101720379",
-            appId: "1:928101720379:web:204822765d26e331f3171e",
-            measurementId: "G-R1XHQNYJN4"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
+
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -84,13 +77,13 @@
                             </tr>
                         </thead>
                         <tbody class="trainSchedule">
-                            <tr>
+                            <!-- <tr>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
